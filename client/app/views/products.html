@@ -1,0 +1,36 @@
+<div class="well well-lg">
+    <h2>Our In stock Movies</h2>
+</div>
+<div class="row">
+    <div data-ng-repeat="p in products" class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                {{p.name}}
+            </div>
+            <div class="panel-body">
+                <div class="thumbnail">
+                    <img src="{{p.img}}" alt="{{p.name}}" style="width: 300px; height: 300px;">
+                    <div class="caption">
+                        <h3>
+                            Price: {{p.price}}
+                        </h3>
+                        <h4>
+                            Quantity: {{p.quantity}}
+                        </h4>
+                        <p>
+                            {{p.description}}
+                        </p>
+                        <p>Type: <strong>{{p.type}}</strong></p>
+                        <p>
+                            <button class="btn btn-primary" ng-click="addToCart( p.id )" role="button"> <i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                            <a ng-href="#/cart" class="btn btn-default" role="button">Check out</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                {{p.name}}
+            </div>
+        </div>
+    </div>
+</div>
